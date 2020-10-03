@@ -1,11 +1,15 @@
 from grafo import Grafo
 class Search:
-    def busca_em_largura(self, file, index):
-        g = Grafo()
-        g.ler(file)
+    def __init__(self, file):
+        self.g = Grafo(file)
         self.C = []
         self.A = []
         self.D = []
+
+    def print_verticies(self, D):
+        output = []
+            
+    def busca_em_largura(self, index):
         for vertice in range(g.qtdVertices()):
             self.C.append(False)
             self.D.append(float("inf"))
@@ -23,7 +27,3 @@ class Search:
                     self.A[vizinho] = u
                     self.Q.append(vizinho)
         return self.D, self.A
-
-if __name__ == "__main__":
-    s = Search()
-    print(s.busca_em_largura("grafos.txt", 0))

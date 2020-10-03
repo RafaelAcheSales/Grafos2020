@@ -1,9 +1,6 @@
-import math
-
 class Grafo:
-    def __init__(self):
-        self._V = dict()
-        self._E = list()
+    def __init__(self, arquivo):
+       self.ler(arquivo)
 
     def qtdVertices(self):
         return len(self._V)
@@ -40,7 +37,7 @@ class Grafo:
         for aresta in self._E:
             if u in aresta and v in aresta:
                 return aresta[2]
-        return math.inf
+        return float("inf")
 
 
     def ler(self, arquivo):
@@ -61,8 +58,7 @@ class Grafo:
         self._E = arestas
         
 if __name__ == "__main__":
-    grafo = Grafo()
-    grafo.ler("grafos.txt")
+    grafo = Grafo("grafos.txt")
     print(grafo.peso(4, 2))
     print(grafo.rotulo(2))
     print(grafo.vizinhos(2))
