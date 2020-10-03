@@ -1,0 +1,14 @@
+*vertices 7
+0 suldailha
+1 floripa
+2 campeche
+3 pint
+4 rola
+5 roluda
+6 cacete
+*edges
+0 1 1
+1 2 5
+2 4 5
+2 5 8
+4 5 4
