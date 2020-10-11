@@ -10,7 +10,7 @@ class Search:
         output = []
             
     def busca_em_largura(self, index):
-        for vertice in range(g.qtdVertices()):
+        for vertice in range(self.g.qtdVertices()):
             self.C.append(False)
             self.D.append(float("inf"))
             self.A.append(None)

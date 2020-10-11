@@ -1,6 +1,13 @@
 class Grafo:
     def __init__(self, arquivo):
        self.ler(arquivo)
+    
+    @property
+    def E(self):
+        return self._E
+    @property
+    def V(self):
+        return self._V
 
     def qtdVertices(self):
         return len(self._V)
